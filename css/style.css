@@ -1,0 +1,192 @@
+body{
+    max-width: 1280px;
+    width: auto;
+}
+#header{
+    max-height: 300px;
+    max-width: 100%;
+    height:auto;
+    width:auto;
+}
+div#header.container{
+    margin: 0px 0px;
+}
+.margin0{
+    margin: 0px 0px;
+}
+.margin_left20{
+    margin-left: 20px;
+}
+.margin_left50{
+    margin-left: 50px;
+}
+.margin_top20{
+    margin-top: 20px;
+}
+.bottom20{
+    position:relative;
+    bottom: 20px;
+}
+.btn_posi{
+    position:relative;
+    top: 30px;
+    right:400px;
+}
+.width100{
+        width:100px;
+}
+.width500{
+        width:500px;
+}
+#logo{
+    max-width: 300px;
+    height: auto;
+    float:left;
+}
+#id{
+    height:auto;
+    width:300px;
+    float:right;
+    position: relative;
+    top:25px;
+}
+p{
+    font-size:20px;
+}
+textarea{
+    width: 700px;
+}
+#text_q{
+    height:200px;
+}
+.float_left{
+    float:left;
+}
+.float_light{
+    float: right;
+}
+.button_position{
+    position: relative;
+    left:500px;
+}
+.btn_posi{
+        width:100px;
+        position: relative;
+        left: 300px;
+    }
+.border{
+    border-left: 1px solid #CEE0F5;
+}
+#footer{
+    margin-top: 100px;
+    height:150px;
+    width: 100%;
+    background-color: #CEE0F5;
+}
+#footer>ul>li{
+    margin-top: 30px;
+    list-style: none;
+    float: left;
+    height: 80px;
+    width: 33%;
+    border-left: 1px solid #222;
+}
+#footer>ul>li>a{
+    position: relative;
+    top:30px;
+}
+@media(max-width: 900px){
+/*    width900px以下*/
+    body{
+        max-width: 900px;
+        width: auto;
+    }
+    #header{
+        height:auto;
+        width:auto;
+    }
+    .width100{
+        float: left;
+        width: 100px;
+    }
+    .width400{
+        width: 400px;
+    }
+    #id{
+        height:auto;
+        width:300px;
+        float:right;
+        position: relative;
+        top:25px;
+    }
+    .button_position{
+        position: relative;
+        left:300px;
+    }
+    .btn_posi{
+        width:100px;
+        position:relative;
+        top: 30px;
+        left:0px;
+    }
+    textarea{
+        width: 500px;
+    }
+}
+@media screen and (max-width:700px){
+    img{
+        max-width: 100%;
+        height: auto;
+        width /***/:auto;　
+    }
+    #id{
+        height:auto;
+        width:300px;
+        float:right;
+        position: relative;
+        top:25px;
+    }
+    .button_position{
+        position: relative;
+        left:130px;
+    }
+    .btn_posi{
+        width:100px;
+        position:relative;
+        top: 30px;
+        right:0;
+    }
+    textarea{
+        width: 400px;
+    }
+
+}
+@media screen and (max-width: 600px){
+    /*        ～以下、画面の横幅が700pxまでの場合のスタイル記入～*/
+    img{
+        max-width: 100%;
+        height: auto;
+        width /***/:auto;　
+    }
+    .width400{
+        width: 60%;
+    }
+    #id{
+        height:auto;
+        width:300px;
+        float:right;
+        position: relative;
+        top:0px;
+    }
+    .button_position{
+        position: relative;
+        left:60px;
+    }
+    .min_posi_bottom20{
+        position:relative;
+        bottom: 20px;
+    }
+    textarea{
+        width: 300px;
+    }
+}

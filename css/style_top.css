@@ -1,0 +1,153 @@
+body{
+    max-width: 1280px;
+    text-align: center;
+}
+div.container.row{
+    width: 1280px;
+}
+#header{
+    background-color: #CEE0F5;
+    height:100px;
+    width:1280px;
+}
+.top30{
+    position: relative;
+    top:30px;
+}
+p{
+    font-size:20px;
+}
+.group{
+    height: 350px;
+    width: 1280px;
+    overflow: inherit;
+}
+.image{
+    max-width:400px;
+}
+.comment{
+    margin: 100px 50px;
+    max-height:500px;
+    max-width:400px;
+    position: relative;
+    left:70px;
+}
+.float_left{
+    margin-left: 100px;
+    float:left;
+}
+.float_light{
+    margin-right: 200px;
+    float: right;
+}
+.title{
+        max-width: 100%;
+        width:600px;
+        margin-left: 300px;
+        margin-right: 300px;
+    }
+#footer{
+    margin-top: 100px;
+    height:150px;
+    width: 100%;
+    background-color: #CEE0F5;
+}
+#footer>ul>li{
+    margin-top: 30px;
+    list-style: none;
+    float: left;
+    height: 80px;
+    width: 33%;
+    border-left: 1px solid #222;
+}
+#footer>ul>li>a{
+    position: relative;
+    top:30px;
+}
+@media(max-width: 900px){
+/*    width900px以下*/
+    body{
+        max-width: 900px;
+        width: auto;
+    }
+    #header{
+        background-color: #CEE0F5;
+        height:auto;
+        width:auto;
+    }
+    .top30{
+        position: relative;
+        top:0px;
+    }
+    div.container.row{
+        max-width: auto;
+        width: auto;
+    }
+    section{
+        float: none;
+        max-width: auto;
+        width: auto;
+        height:auto;
+    }
+    img{
+        max-width: 900px;
+        max-height: auto;
+        height: auto;
+        width /***/:auto;　
+    }
+    .title{
+        max-width: 900px;
+        width:auto;
+        max-height: auto;
+        height:auto;
+        margin: 0px;
+    }
+    .float_left{
+        margin-left: 0px;
+        float:none;
+    }
+    .float_light{
+        margin-right: 0px;
+        float:none;
+    }
+    .group{
+        max-height: auto;
+        height: auto;
+        max-width: 900px;
+        width: auto;
+    }
+    .comment{
+        margin: 0px;
+        max-height:auto;
+        max-width:auto;
+        position: relative;
+        left:0px;
+    }
+    .image{
+        max-width:auto;
+    }
+}
+@media screen and (max-width:600px){
+img{
+    max-width: 100%;
+    height: auto;
+    width /***/:auto;　
+}
+
+/*～以下、画面の横幅が640pxまでの場合のスタイル記入～*/
+}
+@media screen and (max-width: 700px){
+    /*        ～以下、画面の横幅が700pxまでの場合のスタイル記入～*/
+    img{
+        max-width: 100%;
+        height: auto;
+        width /***/:auto;　
+    }
+    .title{
+        text-align: center;
+        max-width: 100%;
+        width:100%;
+        margin-left:auto;
+        margin-right: auto;
+    }
+}
