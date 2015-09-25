@@ -13,15 +13,13 @@ login.phpにIDとpassを渡す
     </head>
     <body>
     <div id="header" class="container">
-        <form class="form-inline" method="post" action="">
-            <input type="text" class="form-control top30" placeholder="ID">
-            <input type="password" class="form-control top30" placeholder="PASS">
+        <form class="form-inline" method="post" action="login.php">
+            <input type="text" name="id" class="form-control top30" placeholder="ID">
+            <input type="password" name="pass" class="form-control top30" placeholder="PASS">
             <input type="submit" value="ログイン" class="btn btn-primary top30">
-            <input type="hidden" name="post_flg" value="1">
-            <a href="" class="top30">新規登録</a>
+            <a href="register.php" class="top30">新規登録</a>
         </form>
     </div>
-    
     <div class="container row">
         <h1><img src="img/rogo.png" alt="Business_Skill"></h1>
         <img src="img/good.jpg" alt="仕事がうまくいっているイメージ" class="title">
@@ -54,16 +52,4 @@ login.phpにIDとpassを渡す
         <img src="img/mission2.png" alt="人財不足の解消" width="900px;">
         <img src="img/contribution_to_society.png" alt="社会貢献" width="900px">
     </div>
-    
-    <div id="footer" class="container">
-        <ul>
-            <li><a>利用規約</a></li>
-            <li><a>プライバシーポリシー</a></li>
-            <li><a>お問い合わせ</a></li>
-        </ul>
-    </div>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
+<?php require('require/footer.php'); ?>
