@@ -10,19 +10,19 @@
 
 -->
 <?php
+    $id = htmlspecialchars($_POST["id"]);
     $key = htmlspecialchars($_POST["key"]);
-    $pdo = new PDO('mysql:dbname=bs-c_db;host=localhost', 'root', '');
+    $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
     $stmt = $pdo->query('SET NAMES utf8');
     $stmt = $pdo->prepare("SELECT * FROM question WHERE title LIKE '%$key%' OR question LIKE '%$key%' ORDER BY id DESC LIMIT 10");
     $flag = $stmt->execute();
-    $view="";
+    $view="<br>";
     if($flag==false){
         $view = "SQLエラー";
     }else{
-        $view .= '<br>';
         while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
           //質問リスト　questionテーブルのidを渡す。
-            $view .= '<a href="question_reading.php?id='.$result['id'].'"method="get" action="question_reading.php">'.$result['title'].'</a><br>'.mb_substr($result['question'],0,100,'UTF-8').'<br><hr>';
+            $view .= '<a href="question_reading.php?question_id='.$result['id'].'&id='.$id.'"method="get" action="question_reading.php">'.$result['title'].'</a><br>'.mb_substr($result['question'],0,100,'UTF-8').'<br><hr>';
         }
     }
 ?>

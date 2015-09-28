@@ -3,14 +3,10 @@
     submitされたら、question_confirm.phpにデータ送りページ遷移
 -->
 <?php
-    $id;
     if(isset($_GET)){
         $id = htmlspecialchars($_GET["id"]);
-    }
-    if(isset($_POST)){
-        $id = htmlspecialchars($_POST["id"]);
-        $title = htmlspecialchars($_POST["title"]);
-        $question = htmlspecialchars($_POST["question"]);
+        $title = htmlspecialchars($_GET["title"]);
+        $question = htmlspecialchars($_GET["question"]);
     }
 ?>
 <?php require('require/header.php'); ?>

@@ -8,17 +8,19 @@
     $mail;
     $pass1;
     $pass2;
-    if(isset($_GET)){
-        $id = htmlspecialchars($_GET["id"]);
-        $mail = htmlspecialchars($_GET["mail"]);
-        $pass1 = htmlspecialchars($_GET["pass1"]);
-        $pass2 = htmlspecialchars($_GET["pass2"]);
+    if(isset($_POST)){
+        $id = htmlspecialchars($_POST["id"]);
+        $mail = htmlspecialchars($_POST["mail"]);
+        $pass1 = htmlspecialchars($_POST["pass1"]);
+        $pass2 = htmlspecialchars($_POST["pass2"]);
         if($pass1 != $pass2){
             echo "確認用のパスワードと一致しません。<br>パスワードを正しく入力してください。";
         }
     }else{
         $id="";
         $mail="";
+        $pass1="";
+        $pass2="";
     }
 ?>
 <?php require('require/header.php'); ?>

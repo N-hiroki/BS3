@@ -50,6 +50,11 @@ div#header.container{
     position: relative;
     top:25px;
 }
+#a{
+    position:relative;
+    bottom: 34px;
+    left:100px;
+}
 p{
     font-size:20px;
 }
@@ -67,7 +72,7 @@ textarea{
 }
 .button_position{
     position: relative;
-    left:500px;
+    left:100px;
 }
 .btn_posi{
         width:100px;
@@ -95,6 +100,7 @@ textarea{
     position: relative;
     top:30px;
 }
+
 @media(max-width: 900px){
 /*    width900px以下*/
     body{
@@ -120,6 +126,7 @@ textarea{
         top:25px;
     }
     .button_position{
+        width:100px;
         position: relative;
         left:300px;
     }
@@ -131,6 +138,12 @@ textarea{
     }
     textarea{
         width: 500px;
+    }
+    #a{
+        width:100px;
+        position:relative;
+        bottom: 34px;
+        left:100px;
     }
 }
 @media screen and (max-width:700px){
@@ -147,6 +160,7 @@ textarea{
         top:25px;
     }
     .button_position{
+        width:100px;
         position: relative;
         left:130px;
     }
@@ -158,6 +172,12 @@ textarea{
     }
     textarea{
         width: 400px;
+    }
+    #a{
+        width:100px;
+        position:relative;
+        bottom: 34px;
+        left:100px;
     }
 
 }
@@ -188,5 +208,11 @@ textarea{
     }
     textarea{
         width: 300px;
+    }
+    #a{
+        width:100px;
+        position:relative;
+        bottom: 34px;
+        left:100px;
     }
 }

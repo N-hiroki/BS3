@@ -18,7 +18,7 @@ question.phpからデータを受け取る。
     <?=$view?>
 </div>
 <!--修正用form-->
-<form class="form-inline button_position" method="post" action="question.php">
+<form class="form-inline button_position" method="GET" action="question.php">
     <input type="hidden" name="id" value="<?=$id?>">
     <input type="hidden" name="title" value="<?=$title?>">
     <input type="hidden" name="question" value="<?=$question?>">
