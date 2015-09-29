@@ -9,10 +9,10 @@
     $pass1;
     $pass2;
     if(isset($_POST)){
-        $id = htmlspecialchars($_POST["id"]);
-        $mail = htmlspecialchars($_POST["mail"]);
-        $pass1 = htmlspecialchars($_POST["pass1"]);
-        $pass2 = htmlspecialchars($_POST["pass2"]);
+        $id = $_POST["id"];
+        $mail = $_POST["mail"];
+        $pass1 = $_POST["pass1"];
+        $pass2 = $_POST["pass2"];
         if($pass1 != $pass2){
             echo "確認用のパスワードと一致しません。<br>パスワードを正しく入力してください。";
         }
