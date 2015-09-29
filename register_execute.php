@@ -1,7 +1,7 @@
 <?php
-    $id = htmlspecialchars($_POST["id"]);
-    $mail = htmlspecialchars($_POST["mail"]);
-    $pass = htmlspecialchars($_POST["pass"]);
+    $id = $_POST["id"];
+    $mail = $_POST["mail"];
+    $pass = $_POST["pass"];
     $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
     $stmt = $pdo->query('SET NAMES utf8');
     $stmt = $pdo->prepare("INSERT INTO user(id,mail,pass)VALUES(:id,:mail,:pass)");
