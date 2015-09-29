@@ -1,8 +1,8 @@
 <?php
-    $id = htmlspecialchars($_POST["id"]);
+    $id = $_POST["id"];
     $title = htmlspecialchars($_POST["title"]);
     $question = htmlspecialchars($_POST["question"]);
-    $user_id = htmlspecialchars($_POST["user_id"]);
+    $user_id = $_POST["user_id"];
     $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
     $stmt = $pdo->query('SET NAMES utf8');
     $stmt = $pdo->prepare("UPDATE question SET title=?, question=? WHERE id=?");
