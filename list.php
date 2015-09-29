@@ -10,7 +10,7 @@
 
 -->
 <?php
-    $id = htmlspecialchars($_POST["id"]);
+    $id = $_POST["id"];
     $key = htmlspecialchars($_POST["key"]);
     $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
     $stmt = $pdo->query('SET NAMES utf8');
