@@ -1,7 +1,7 @@
 <?php
-    $user_id = htmlspecialchars($_POST["id"]);
-    $title = htmlspecialchars($_POST["title"]);
-    $question = htmlspecialchars($_POST["question"]);
+    $user_id = $_POST["id"];
+    $title = $_POST["title"];
+    $question = $_POST["question"];
     $date = date("Y-m-d H:i:s");
     
     $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
