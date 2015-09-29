@@ -23,10 +23,9 @@ question_IDをキーに検索
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         $view .= '<br>ユーザー:'.$result['user_id'].'<br>作成日:'.$result['date'].'<br><hr>'.$result['title'].'<br><hr>'.$result['question'].'<br><hr>';
         $user_id = $result['user_id'];
-        $question_id = $result['id'];
     }
 //    回答検索
-    $stmt_ans = $pdo->prepare("SELECT * FROM ans WHERE user_id='$question_id'");
+    $stmt_ans = $pdo->prepare("SELECT * FROM ans WHERE id='$id'");
     $flag_ans = $stmt_ans->execute();
     $ans="";
     if($flag_ans==false){
