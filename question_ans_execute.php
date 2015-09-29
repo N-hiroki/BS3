@@ -7,8 +7,8 @@ question_reading.phpにquestion_idを渡し同じquestionを表示。
 -->
 <?php
     $ans = htmlspecialchars($_POST["ans"]);
-    $id = htmlspecialchars($_POST["id"]);
-    $user_id = htmlspecialchars($_POST["user_id"]);
+    $id = $_POST["id"];
+    $user_id = $_POST["user_id"];
     $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
     $stmt = $pdo->query('SET NAMES utf8');
     //どうやって指定のquestionに回答カラムを追加し、ansを格納するのか？
