@@ -31,10 +31,9 @@ IDをheaderにecho
 <?php require('require/header.php'); ?>
 <div class="container row margin_left50">
     <form class="form-inline" method="post" action="list.php">
-        <a href="question.php?id=<?=$id?>" method="get" action="question.php" class="btn btn-primary">質問する！！</a>
-        <a href="history_list.php?id=<?=$id?>" method="get" action="history_list.php" class="btn btn-primary">質問履歴</a>
+        <a href="question.php" class="btn btn-primary">質問する！！</a>
+        <a href="history_list.php" class="btn btn-primary">質問履歴</a>
         <input type="text" name="key" class="form-control width400" placeholder="検索">
-        <input type="hidden" name="id" value="<?=$id?>">
         <input type="submit" value="検索" class="btn btn-primary">
     </form>
     <label class="margin_top20">新規質問</label>
