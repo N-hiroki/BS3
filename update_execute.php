@@ -1,5 +1,5 @@
 <?php
-    $id = $_POST["id"];
+    require('require/session.php');
     $question_id = $_POST["question_id"];
     $title = htmlspecialchars($_POST["title"]);
     $question = htmlspecialchars($_POST["question"]);
