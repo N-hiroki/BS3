@@ -24,7 +24,7 @@ IDをheaderにecho
     }else{
         while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
         //新規質問
-        $view .= '<a href="question_reading.php?        question_id='.$result['id'].'&id='.$id.'"method="get"action="question_reading.php">'.$result['title'].$result['date'].'</a><br>';
+        $view .= '<a href="question_reading.php?        question_id='.$result['id'].'"method="get"action="question_reading.php">'.$result['title'].$result['date'].'</a><br>';
         }
     }
 ?>
