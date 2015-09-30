@@ -5,13 +5,13 @@ question_IDをキーに検索
 表示
 -->
 <?php
+    require('require/session.php');
     $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
 //    question table用
     $stmt = $pdo->query('SET NAMES utf8');
 //    ans table用
     $stmt_ans = $pdo->query('SET NAMES utf8');
 //    question id 取得
-    $id = htmlspecialchars($_GET["id"]);
     $question_id = htmlspecialchars($_GET["question_id"]);
 //    質問検索
     $stmt = $pdo->prepare("SELECT * FROM question WHERE user_id='$id'");
