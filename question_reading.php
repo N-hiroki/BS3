@@ -38,13 +38,13 @@
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         $view .= '<br>ユーザー:'.$result['user_id'].'<br>作成日:'.$result['date'].'<hr>title:'.$result['title'].'<hr>text:'.$result['question'].'<br><hr>';
     }
-
     if($flag_ans==false){
 //        エラーチェック
         $ans = "SQLエラー（ans）";
     }else{
-        $result_ans = $stmt_ans->fetch(PDO::FETCH_ASSOC);
-        $ans .= '回答ユーザー'.$result_ans['ans_user'].'<hr><br>'.$result['ans'];
+        while($result_ans = $stmt_ans->fetch(PDO::FETCH_ASSOC)){
+        $ans .= '回答ユーザー'.$result_ans['ans_user'].'<br>text:'.$result_ans['ans'].'<hr><br>';
+        }
     }
 ?>
 <?php require('require/header.php'); ?>
@@ -58,7 +58,6 @@
 <form class="form-inline " method="post" action="question_ans_execute.php">
     <textarea placeholder="回答を入力してください。" id="text_q" name="ans" class="margin_left50"></textarea>
     <input type="submit" class="form-control btn-primary btn_posi margin_left50" width="100px" value="回答">
-    <input type="hidden" name="id" value="<?=$id?>">
-    <input type="hidden" name="id" value="<?=$user_id?>">
+    <input type="hidden" name="question_id" value="<?=$question_id?>">
 </form>
 <?php require('require/footer.php'); ?>
