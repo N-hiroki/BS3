@@ -15,7 +15,7 @@
     if($status==false){
         echo "SQLエラー";
     }else{
-        header("Location: index.php?id=$user_id");
+        header("Location: index.php");
     }
 
 
