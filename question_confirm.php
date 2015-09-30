@@ -6,7 +6,7 @@ question.phpからデータを受け取る。
 投稿ー＞question_execute
 -->
 <?php
-    $id = $_POST["id"];
+    require('require/session.php');
     $title = htmlspecialchars($_POST["title"]);
     $question = htmlspecialchars($_POST["question"]);
     $view = $title.'<br><hr>'.$question.'<br><hr>';
