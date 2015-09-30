@@ -22,7 +22,7 @@ question_IDをキーに検索
         $view = "SQLエラー（view）";
     }else{
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        $view .= '<br>ユーザー:'.$result['user_id'].'<br>作成日:'.$result['date'].'<br><hr>'.$result['title'].'<br><hr>'.$result['question'].'<br><hr>';
+        $view .= 'user:'.$result['user_id'].' date:'.$result['date'].'<br><hr>title:'.$result['title'].'<br>text:'.$result['question'].'<br><hr>';
     }
 //    回答検索
     $stmt_ans = $pdo->prepare("SELECT * FROM ans WHERE id='$question_id'");
@@ -32,8 +32,9 @@ question_IDをキーに検索
 //        エラーチェック
         $ans = "SQLエラー（ans）";
     }else{
-        $result_ans = $stmt_ans->fetch(PDO::FETCH_ASSOC);
-        $ans = '回答ユーザー:'.$result_ans['ans_user'].'<hr><br>'.$result_ans['ans'];
+        while($result_ans = $stmt_ans->fetch(PDO::FETCH_ASSOC)){
+            $ans .= 'anser:'.$result_ans['ans_user'].' date:'.$result_ans['date'].'<br>'.$result_ans['ans'];
+        }
     }
 ?>
 <?php require('require/header.php'); ?>
