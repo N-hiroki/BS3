@@ -11,6 +11,8 @@
 -->
 <?php
     require('require/session.php');
+    $view="";   //    question用変数
+    $ans="";    //    回答用変数
     $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
 //    question table用
     $stmt = $pdo->query('SET NAMES utf8');
@@ -22,28 +24,22 @@
     $stmt = $pdo->prepare("SELECT * FROM question WHERE id = $question_id");
 //    回答検索
     $stmt_ans = $pdo->prepare("SELECT * FROM ans WHERE id = $question_id");
-
     $flag = $stmt->execute();
     $flag_ans = $stmt_ans->execute();
-    
-//    question用変数
-    $view="";
-//    回答用変数
-    $ans="";
-
     if($flag==false){
 //        エラーチェック
         $view = "SQLエラー（view）";
     }else{
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        $view .= '<br>ユーザー:'.$result['user_id'].'<br>作成日:'.$result['date'].'<hr>title:'.$result['title'].'<hr>text:'.$result['question'].'<br><hr>';
+        $view .= 'user:'.$result['user_id'].' date:'.$result['date'].'<br><hr>title:'.$result['title'].'<br>text:'.$result['question'].'<br><hr>';
     }
     if($flag_ans==false){
 //        エラーチェック
         $ans = "SQLエラー（ans）";
     }else{
         while($result_ans = $stmt_ans->fetch(PDO::FETCH_ASSOC)){
-        $ans .= '回答ユーザー'.$result_ans['ans_user'].'<br>text:'.$result_ans['ans'].'<hr><br>';
+            $ans .= 'anser:'.$result_ans['ans_user'].' date:'.$result_ans['date'].'<br>text:'.$result_ans['ans'];
+            
         }
     }
 ?>
