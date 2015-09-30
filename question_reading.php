@@ -10,6 +10,7 @@
     ansはansテーブルから。
 -->
 <?php
+    require('require/session.php');
     $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
 //    question table用
     $stmt = $pdo->query('SET NAMES utf8');
@@ -17,8 +18,6 @@
     $stmt_ans = $pdo->query('SET NAMES utf8');
 //    question id 取得
     $question_id = htmlspecialchars($_GET["question_id"]);
-//    user_id取得
-    $id = htmlspecialchars($_GET["id"]);
 //    質問検索
     $stmt = $pdo->prepare("SELECT * FROM question WHERE id = $question_id");
 //    回答検索
