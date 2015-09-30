@@ -15,7 +15,7 @@
     if($flag==false){
         $view = "SQLエラー";
     }else{
-        $view .= '<br>';
+        $view = '<br>';
         while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
         //新規質問
         $view .= '<a href="question_history.php?        question_id='.$result['id'].'&id='.$id.'"method="get"action="question_history.php">「'.$result['title'].'」'.$result['date'].'</a><br>';
