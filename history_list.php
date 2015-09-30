@@ -7,8 +7,7 @@
 ページング
 -->
 <?php
-    session_start();
-    $id = $_SESSION["id"];
+    require('require/session.php');
     $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
     $stmt = $pdo->query('SET NAMES utf8');
     $stmt = $pdo->prepare("SELECT * FROM question WHERE user_id='$id' ORDER BY date DESC LIMIT 5");
