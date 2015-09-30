@@ -12,11 +12,6 @@
     if(isset($_GET["question"])){
         $question = htmlspecialchars($_GET["question"]);
     }
-//    if(isset($_GET)){
-//        echo "1+";
-//        $title = htmlspecialchars($_GET["title"]);
-//        $question = htmlspecialchars($_GET["question"]);
-//    }
 ?>
 <?php require('require/header.php'); ?>
 <div class="margin_left50">
