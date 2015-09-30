@@ -14,7 +14,7 @@ question_IDをキーに検索
 //    question id 取得
     $question_id = htmlspecialchars($_GET["question_id"]);
 //    質問検索
-    $stmt = $pdo->prepare("SELECT * FROM question WHERE user_id='$id'");
+    $stmt = $pdo->prepare("SELECT * FROM question WHERE id='$question_id'");
     $flag = $stmt->execute();
     $view="";
     if($flag==false){
@@ -25,7 +25,7 @@ question_IDをキーに検索
         $view .= '<br>ユーザー:'.$result['user_id'].'<br>作成日:'.$result['date'].'<br><hr>'.$result['title'].'<br><hr>'.$result['question'].'<br><hr>';
     }
 //    回答検索
-    $stmt_ans = $pdo->prepare("SELECT * FROM ans WHERE id='$id'");
+    $stmt_ans = $pdo->prepare("SELECT * FROM ans WHERE id='$question_id'");
     $flag_ans = $stmt_ans->execute();
     $ans="";
     if($flag_ans==false){
