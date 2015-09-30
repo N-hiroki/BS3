@@ -1,5 +1,5 @@
         <div id="footer" class="container">
-            <a href="" class="float_light bottom20 margin_left20 border">ログアウト</a>
+            <a href="logout.php" class="float_light bottom20 margin_left20 border">ログアウト</a>
             <a href="index.php?id=<?=$id?>" class="float_light bottom20 border">メイン</a>
             <ul>
                 <li><a>利用規約</a></li>
