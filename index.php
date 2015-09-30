@@ -13,8 +13,9 @@ IDをheaderにecho
 ページ遷移する時ID渡す
 -->
 <?php
+    session_start();
     $view = '<br>';
-    $id = htmlspecialchars($_GET["id"]);
+    $id = $_SESSION["id"];
     $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
     $stmt = $pdo->query('SET NAMES utf8');
     $stmt = $pdo->prepare("SELECT * FROM question ORDER BY date DESC LIMIT 5");//新規質問５件取得
