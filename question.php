@@ -3,8 +3,8 @@
     submitされたら、question_confirm.phpにデータ送りページ遷移
 -->
 <?php
+    require('require/session.php');
     if(isset($_GET)){
-        $id = htmlspecialchars($_GET["id"]);
         $title = htmlspecialchars($_GET["title"]);
         $question = htmlspecialchars($_GET["question"]);
     }
