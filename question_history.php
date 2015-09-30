@@ -33,7 +33,7 @@ question_IDをキーに検索
         $ans = "SQLエラー（ans）";
     }else{
         $result_ans = $stmt_ans->fetch(PDO::FETCH_ASSOC);
-        $ans .= '回答ユーザー:'.$result_ans['ans_user'].'<hr><br>'.$result['ans'];
+        $ans = '回答ユーザー:'.$result_ans['ans_user'].'<hr><br>'.$result_ans['ans'];
     }
 ?>
 <?php require('require/header.php'); ?>
