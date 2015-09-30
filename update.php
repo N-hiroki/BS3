@@ -32,7 +32,7 @@
         <textarea id="text_q" placeholder="質問" name="question"><?=$question?></textarea>
         <input type="submit" class="form-control btn-primary btn_posi" value="修正">
         <input type="hidden" name="id" value="$id">
-        <input type="hidden" name="question_id" value="$question_id">
+        <input type="hidden" name="question_id" value="<?=$question_id?>">
     </form>
 </div>
 <?php require('require/footer.php'); ?>
