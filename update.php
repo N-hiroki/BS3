@@ -5,9 +5,9 @@
     submitされたら、update_confirm.phpにデータ送りページ遷移
 -->
 <?php
+    require('require/session.php');
     $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
     $stmt = $pdo->query('SET NAMES utf8');
-    $id = htmlspecialchars($_GET["id"]);
     $question_id = htmlspecialchars($_GET["question_id"]);
     $stmt = $pdo->prepare("SELECT * FROM question WHERE id = $question_id");
     $flag = $stmt->execute();
