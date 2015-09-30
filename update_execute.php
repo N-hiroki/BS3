@@ -3,9 +3,6 @@
     $question_id = $_POST["question_id"];
     $title = htmlspecialchars($_POST["title"]);
     $question = htmlspecialchars($_POST["question"]);
-    var_dump($question_id);
-    var_dump($title);
-    var_dump($question);
     $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
     $stmt = $pdo->query('SET NAMES utf8');
     $stmt = $pdo->prepare("UPDATE question SET title=?, question=? WHERE id=?");
