@@ -13,7 +13,7 @@
     $flag = $stmt->execute();
     if($flag==false){
 //        エラーチェック
-        $view = "SQLエラー（view）";
+         echo "SQLエラー（view）";
     }else{
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         $title = $result['title'];
@@ -25,7 +25,6 @@
 
 <?php require('require/header.php'); ?>
 <div class="margin_left50">
-    <?=$view?>
     <label class="margin_top20">修正する</label>
     <form class="form-inline" method="post" action="update_execute.php">
         <textarea placeholder="タイトル" name="title"><?=$title?></textarea>
