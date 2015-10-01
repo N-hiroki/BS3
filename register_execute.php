@@ -11,7 +11,8 @@
     $status = $stmt->execute();   //sql実行
     if($status==false){
     }else{
-        header("Location: index.php?id=$id");
+        header("Location: index.php");
+        exit;
     }
 ?>
 <?php require('require/header.php'); ?>
