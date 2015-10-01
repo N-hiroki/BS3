@@ -22,5 +22,6 @@ question_reading.phpにquestion_idを渡し同じquestionを表示。
         echo "SQLエラー";
     }else{
         header("Location: index.php");
+        exit;
     }
 ?>
