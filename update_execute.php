@@ -13,6 +13,7 @@
     if($status==false){
         echo "SQLエラー";
     }else{
-        header("Location: index.php?id='$id'");
+        header("Location: index.php");
+        exit;
     }
 ?>
