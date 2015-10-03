@@ -38,4 +38,4 @@
     <input type="hidden" name="pass" value="<?=$pass1?>">
     <input type="submit" class="form-control btn-primary" id="a"value="登録">
 </form>
-<?php require('require/footer.php'); ?>
+<?php require('require/footer2.php'); ?>

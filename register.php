@@ -43,4 +43,4 @@
             <input type="submit" class="form-control btn-primary btn_posi" value="確認">
         </form>
     </div>
-<?php require('require/footer.php'); ?>
+<?php require('require/footer2.php'); ?>
