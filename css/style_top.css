@@ -64,6 +64,11 @@ p{
     position: relative;
     top:30px;
 }
+#top{
+    position: relative;
+    bottom: 30px;
+    left: 150px;
+}
 @media(max-width: 900px){
 /*    width900px以下*/
     body{
@@ -126,15 +131,11 @@ p{
     .image{
         max-width:auto;
     }
-}
-@media screen and (max-width:600px){
-img{
-    max-width: 100%;
-    height: auto;
-    width /***/:auto;　
-}
-
-/*～以下、画面の横幅が640pxまでの場合のスタイル記入～*/
+    #top{
+    position: relative;
+    bottom: 30px;
+    left: 300px;
+    }
 }
 @media screen and (max-width: 700px){
     /*        ～以下、画面の横幅が700pxまでの場合のスタイル記入～*/
@@ -150,4 +151,22 @@ img{
         margin-left:auto;
         margin-right: auto;
     }
+    #top{
+        position: relative;
+        bottom: 30px;
+        left:200px;
+    }
+}
+@media screen and (max-width:600px){
+    img{
+        max-width: 100%;
+        height: auto;
+        width /***/:auto;　
+    }
+    #top{
+        position: relative;
+        bottom: 30px;
+        left: 150px;
+    }
+/*～以下、画面の横幅が640pxまでの場合のスタイル記入～*/
 }

@@ -59,14 +59,4 @@ login.phpにIDとpassを渡す
         <img src="img/mission2.png" alt="人財不足の解消" width="900px;">
         <img src="img/contribution_to_society.png" alt="社会貢献" width="900px">
     </div>
-    <div id="footer" class="container">
-        <ul>
-            <li><a>利用規約</a></li>
-            <li class="min_posi_bottom20"><a>プライバシーポリシー</a></li>
-            <li class="bottom20"><a>お問い合わせ</a></li>
-        </ul>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+    <?php require('require/footer2.php'); ?>
