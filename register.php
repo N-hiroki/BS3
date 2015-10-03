@@ -4,23 +4,25 @@
     修正時データ受け取る
 -->
 <?php
-    $id;
-    $mail;
-    $pass1;
-    $pass2;
-    if(isset($_POST)){
-        $id = $_POST["id"];
-        $mail = $_POST["mail"];
-        $pass1 = $_POST["pass1"];
-        $pass2 = $_POST["pass2"];
-        if($pass1 != $pass2){
-            echo "確認用のパスワードと一致しません。<br>パスワードを正しく入力してください。";
-        }
-    }else{
-        $id="";
-        $mail="";
-        $pass1="";
-        $pass2="";
+    $id ="";
+    $mail = "";
+    $pass1 = "";
+    $pass2 = "";
+    $NGpass = "<br>";
+    if(isset($_GET["id"])){
+        $id = $_GET["id"];
+    }
+    if(isset($_GET["mail"])){
+        $mail = $_GET["mail"];
+    }
+    if(isset($_GET["pass1"])){
+        $pass1 = $_GET["pass1"];
+    }
+    if(isset($_GET["pass2"])){
+        $pass2 = $_GET["pass2"];
+    }
+    if(isset($_GET["pass1"]) && isset($_GET["pass2"]) && $pass1 != $pass2){
+        $NGpass .= '<span style="color:red;">確認用のパスワードと一致しません。<br>パスワードを正しく入力してください。</span><br>';
     }
 ?>
 <?php require('require/header.php'); ?>
@@ -29,9 +31,9 @@
         <form method="post" action="register_confirm.php">
             <label class="width100">ID</label>
             <input type="text" name="id" class="form-control" placeholder="ID" value="<?=$id?>">
-            <br>
+            <?=$NGpass?>
             <label class="width100">Pass</label>
-            <input type="password"  name="pass1" class="form-control" placeholder="Pass">
+            <input type="password" name="pass1" class="form-control" placeholder="Pass">
             <br>
             <label class="width100">確認用Pass</label>
             <input type="password" name="pass2" class="form-control" placeholder="Pass">

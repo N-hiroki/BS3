@@ -13,7 +13,6 @@
     $pass2 = htmlspecialchars($_POST["pass2"]);
     $mail = htmlspecialchars($_POST["mail"]);
     $view = 'ID:'.$id.'<br>Mail:'.$mail;
-    //var_dump($_POST);
     if($pass1 != $pass2){
         header("Location: register.php?id=$id&pass1=$pass1&pass2=$pass2&mail=$mail");
         exit;
@@ -25,7 +24,7 @@
     <br>
     <?=$view?>
 </div>
-<form class="form-inline button_position" method="post" action="register.php">
+<form class="form-inline button_position" method="get" action="register.php">
     <input type="hidden" name="id" value="<?=$id?>">
     <input type="hidden" name="mail" value="<?=$mail?>">
     <input type="hidden" name="pass1" value="<?=$pass1?>">
