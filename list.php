@@ -7,7 +7,6 @@
 選択した質問のquestion_IDをquestion_readingに送りページ遷移
 
 ページング
-
 -->
 <?php
     require('require/session.php');
@@ -32,9 +31,6 @@
     <br>
     <?=$view?>
 </div>
-<form class="form-inline button_position" method="post" action="">
-    <input type="button" class="form-control btn-primary width100" value="前へ">
-    <input type="button" class="form-control btn-primary width100 margin_left50" value="次へ">
-    <input type="hidden" name="post_flg" value="1">
-</form>
+<a href="" id="btn_ret" class="form-control btn-primary width100 float_left">前へ</a>
+<a herf="" id="btn_nex" class="form-control btn-primary width100">次へ</a>
 <?php require('require/footer.php'); ?>
