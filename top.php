@@ -21,8 +21,8 @@ login.phpにIDとpassを渡す
     <body>
     <div id="header" class="container">
         <form class="form-inline" method="post" action="login.php">
-            <input type="text" name="id" class="form-control top30" placeholder="ID">
-            <input type="password" name="pass" class="form-control top30" placeholder="PASS">
+            <input type="text" name="id" class="form-control top30" placeholder="ID" value="">
+            <input type="password" name="pass" class="form-control top30" placeholder="PASS" value="">
             <input type="submit" value="ログイン" class="btn btn-primary top30">
             <a href="register.php" class="top30">新規登録</a>
         </form>

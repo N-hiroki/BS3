@@ -26,7 +26,7 @@
 <?php require('require/header.php'); ?>
 <div class="margin_left50">
     <label class="margin_top20">修正する</label>
-    <form class="form-inline" method="post" action="update_execute.php">
+    <form method="post" action="update_execute.php">
         <textarea placeholder="タイトル" name="title"><?=$title?></textarea>
         <textarea id="text_q" placeholder="質問" name="question"><?=$question?></textarea>
         <input type="submit" class="form-control btn-primary btn_posi" value="修正">

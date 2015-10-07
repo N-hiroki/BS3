@@ -45,6 +45,6 @@ question_IDをキーに検索
     <br>
     <?=$ans?>
 </div>
-<a href="history_list.php?id=$user_id"><input type="button" class="form-control btn-primary width100 button_position" value="戻る"></a>
-<a href="update.php?id=<?=$id?>&question_id=<?=$question_id?>"><input type="button" class="form-control btn-primary width100 button_position float_left" value="修正"></a>
+<a href="history_list.php?id=$user_id"><input type="button" class="form-control btn-primary width100 button_position float_left" value="戻る"></a>
+<a href="update.php?id=<?=$id?>&question_id=<?=$question_id?>"><input type="button" class="form-control btn-primary width100 button_position float_left margin_left50" value="修正"></a>
 <?php require('require/footer.php'); ?>

@@ -51,7 +51,7 @@
     <br>
     <?=$ans?>
 </div>
-<form class="form-inline " method="post" action="question_ans_execute.php">
+<form method="post" action="question_ans_execute.php">
     <textarea placeholder="回答を入力してください。" id="text_q" name="ans" class="margin_left50"></textarea>
     <input type="submit" class="form-control btn-primary btn_posi margin_left50" width="100px" value="回答">
     <input type="hidden" name="question_id" value="<?=$question_id?>">

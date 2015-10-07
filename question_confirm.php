@@ -18,17 +18,17 @@ question.phpからデータを受け取る。
     <?=$view?>
 </div>
 <!--修正用form-->
-<form class="form-inline button_position" method="GET" action="question.php">
+<form id="confirm_btn1" method="GET" action="question.php">
     <input type="hidden" name="id" value="<?=$id?>">
     <input type="hidden" name="title" value="<?=$title?>">
     <input type="hidden" name="question" value="<?=$question?>">
-    <input type="submit" class="form-control btn-primary width100" value="修正">
+    <input type="submit" class="form-control btn-primary width100 float_left" value="修正">
 </form>
 <!--投稿用form-->
-<form class="form-inline button_position" method="post" action="question_execute.php">
+<form id="confirm_btn2" method="post" action="question_execute.php">
     <input type="hidden" name="id" value="<?=$id?>">
     <input type="hidden" name="title" value="<?=$title?>">
     <input type="hidden" name="question" value="<?=$question?>">
-    <input type="submit" class="form-control btn-primary width100 margin_left50" value="投稿">
+    <input type="submit" class="form-control btn-primary width100" value="投稿">
 </form>
 <?php require('require/footer.php'); ?>

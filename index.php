@@ -30,7 +30,7 @@ IDをheaderにecho
 ?>
 <?php require('require/header.php'); ?>
 <div class="container row margin_left50">
-    <form class="form-inline" method="post" action="list.php">
+    <form class="form-inline" method="get" action="list.php">
         <a href="question.php" class="btn btn-primary">質問する！！</a>
         <a href="history_list.php" class="btn btn-primary">質問履歴</a>
         <input type="text" name="key" class="form-control width400" placeholder="検索">
