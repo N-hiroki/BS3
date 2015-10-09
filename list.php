@@ -18,7 +18,7 @@
             if($i == 0){
                 $view[$count] = "";
             }
-            $view[$count] .= '<a href="question_reading.php?question_id='.$result['id'].'&id='.$id.'"method="get" action="question_reading.php">'.$result['title'].'</a><br>'.mb_substr($result['question'],0,100,'UTF-8').'<br><hr>';
+            $view[$count] .= '<div class="list"><a href="question_reading.php?question_id='.$result['id'].'&id='.$id.'"method="get" action="question_reading.php">'.$result['title'].'</a><br>'.mb_substr($result['question'],0,100,'UTF-8').'</div><br>';
             $i++;   //件数チェック
             if($i >= $num){  //表示件数以上になったら 入れ終わって端数があるか？
                 $count++;   //ページ数
