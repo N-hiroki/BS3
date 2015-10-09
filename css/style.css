@@ -58,11 +58,21 @@ div#header.container{
 p{
     font-size:20px;
 }
+#confirm_btn1{
+    position:relative;
+    left:300px;
+}
+#confirm_btn2{
+    height:0;
+    position:relative;
+    left:350px;
+}
 textarea{
     width: 700px;
 }
 #text_q{
     height:200px;
+    width:65%;
 }
 .float_left{
     float:left;
@@ -100,7 +110,33 @@ textarea{
     position: relative;
     top:30px;
 }
-
+#btn_ret{
+    text-align: center;
+    position:relative;
+    left:400px;
+}
+#btn_nex{
+    text-align: center;
+    display:inline-block;
+    position:relative;
+    left:500px;
+}
+.page_num{
+    font-size:20px;
+    text-align: left;
+    margin-left: 30%;
+}
+.page_num > a{
+    margin-left: 5px;
+}
+.list{
+    background-color: ghostwhite;
+    height:120%;
+    width: 65%;
+}
+.question{
+    width: 65%;
+}
 @media(max-width: 900px){
 /*    width900px以下*/
     body{
@@ -145,6 +181,25 @@ textarea{
         bottom: 34px;
         left:100px;
     }
+    #btn_ret{
+        text-align: center;
+        position:relative;
+        left:200px;
+    }
+    #btn_nex{
+        text-align: center;
+        display:inline-block;
+        position:relative;
+        left:300px;
+    }
+    #confirm_btn1{
+        position:relative;
+        left:200px;
+    }
+    #confirm_btn2{
+        position:relative;
+        left:250px;
+    }
 }
 @media screen and (max-width:700px){
     img{
@@ -179,7 +234,25 @@ textarea{
         bottom: 34px;
         left:100px;
     }
-
+    #btn_ret{
+        text-align: center;
+        position:relative;
+        left:80px;
+    }
+    #btn_nex{
+        text-align: center;
+        display:inline-block;
+        position:relative;
+        left:130px;
+    }
+    #confirm_btn1{
+        position:relative;
+        left:150px;
+    }
+    #confirm_btn2{
+        position:relative;
+        left:200px;
+    }
 }
 @media screen and (max-width: 600px){
     /*        ～以下、画面の横幅が700pxまでの場合のスタイル記入～*/
@@ -214,5 +287,13 @@ textarea{
         position:relative;
         bottom: 34px;
         left:100px;
+    }
+    #confirm_btn1{
+        position:relative;
+        left:80px;
+    }
+    #confirm_btn2{
+        position:relative;
+        left:130px;
     }
 }

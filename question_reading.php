@@ -1,14 +1,3 @@
-<!--
-    question_ID受け取る
-    データベース接続
-    question_IDをキーに検索
-    表示
-    回答がsubmitしたら、question_ans_execute.phpにデータを送りページ遷移
-
-    view_flagチェック
-    
-    ansはansテーブルから。
--->
 <?php
     require('require/session.php');
     $view="";   //    question用変数
@@ -31,14 +20,14 @@
         $view = "SQLエラー（view）";
     }else{
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        $view .= 'user:'.$result['user_id'].' date:'.$result['date'].'<br><hr>title:'.$result['title'].'<br>text:'.$result['question'].'<br><hr>';
+        $view .= '<div class="question">user:'.$result['user_id'].' /date:'.$result['date'].'<br>title:'.$result['title'].'<br>text:'.$result['question'].'<br></div>';
     }
     if($flag_ans==false){
 //        エラーチェック
         $ans = "SQLエラー（ans）";
     }else{
         while($result_ans = $stmt_ans->fetch(PDO::FETCH_ASSOC)){
-            $ans .= 'anser:'.$result_ans['ans_user'].' date:'.$result_ans['date'].'<br>text:'.$result_ans['ans'];
+            $ans .= '<div class="list">anser:'.$result_ans['ans_user'].' /date:'.$result_ans['date'].'<br>text:'.$result_ans['ans'].'</div><br>';
             
         }
     }

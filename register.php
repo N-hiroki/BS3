@@ -1,8 +1,3 @@
-<!--
-    ログインしてたら新規登録できなくする？
-    submitされたら、データをregister_confirm.phpに渡しページ遷移
-    修正時データ受け取る
--->
 <?php
     $id ="";
     $mail = "";
@@ -28,7 +23,7 @@
 <?php require('require/header.php'); ?>
     <div class="margin_left50">
         <label class="margin_top20">新規登録</label>
-        <form method="post" action="register_confirm.php">
+        <form method="post"  class="question" action="register_confirm.php">
             <label class="width100">ID</label>
             <input type="text" name="id" class="form-control" placeholder="ID" value="<?=$id?>">
             <?=$NGpass?>

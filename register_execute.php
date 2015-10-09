@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $id = $_POST["id"];
     $mail = $_POST["mail"];
     $pass = $_POST["pass"];
@@ -11,6 +12,7 @@
     $status = $stmt->execute();   //sql実行
     if($status==false){
     }else{
+        $_SESSION["id"] = $id;
         header("Location: index.php");
         exit;
     }

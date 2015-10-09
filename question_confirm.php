@@ -1,21 +1,14 @@
-<!--
-question.phpからデータを受け取る。
-データ表示する。
-ページ遷移のさいデータ渡す。
-修正ー＞puestion.php
-投稿ー＞question_execute
--->
 <?php
     require('require/session.php');
     $title = htmlspecialchars($_POST["title"]);
     $question = htmlspecialchars($_POST["question"]);
-    $view = $title.'<br><hr>'.$question.'<br><hr>';
+    $view = '<div class="question">title/'.$title.'<hr>text/'.$question.'</div>';
 ?>
 <?php require('require/header.php'); ?>
 <div class="margin_left50">
     <label class="margin_top20">質問確認</label>
     <br>
-    <?=$view?>
+    <?=nl2br($view)?>
 </div>
 <!--修正用form-->
 <form id="confirm_btn1" method="GET" action="question.php">
