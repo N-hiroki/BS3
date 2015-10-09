@@ -34,9 +34,9 @@
 <?php require('require/header.php'); ?>
 <div class="margin_left50">
     <label class="margin_top20">質問履歴閲覧</label>
-    <?=$view?>
+    <?=nl2br($view)?>
     <br>
-    <?=$ans?>
+    <?=nl2br($ans)?>
 </div>
 <div class="margin_top20">
     <a href="history_list.php"><input type="button" class="form-control btn-primary width100 button_position float_left" value="戻る"></a>

@@ -35,10 +35,9 @@
 <?php require('require/header.php'); ?>
 <div class="margin_left50">
     <label class="margin_top20">質問閲覧</label>
+    <?=nl2br($view)?>
     <br>
-    <?=$view?>
-    <br>
-    <?=$ans?>
+    <?=nl2br($ans)?>
 </div>
 <form method="post" action="question_ans_execute.php">
     <textarea placeholder="回答を入力してください。" id="text_q" name="ans" class="margin_left50"></textarea>
