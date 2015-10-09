@@ -1,17 +1,3 @@
-<!--
-PHP
-loginしたらIDを受け取る。
-IDをheaderにecho
-
-検索ワードをlist.phpに渡す
-
-データベースに接続
-新規質問を５件select
-表示し、questionのIDを持たせquestion_reading.phpに遷移
-
-
-ページ遷移する時ID渡す
--->
 <?php
     require('require/session.php');
     $view = '<br>';
