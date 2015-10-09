@@ -1,10 +1,3 @@
-<!--
-idを受け取る
-POSTでansを受け取る。
-DB起動
-DBに格納。
-question_reading.phpにquestion_idを渡し同じquestionを表示。
--->
 <?php
     require('require/session.php');
     $ans = htmlspecialchars($_POST["ans"]);

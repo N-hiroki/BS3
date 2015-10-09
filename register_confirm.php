@@ -1,12 +1,3 @@
-<!--
-    データを受け取る
-    データ表示
-    passが一致しなければregister.phpに戻る。
-    登録ならregister_execute.phpにデータ渡してページ遷移
-    修正ならregister.phpにデータ渡してページ遷移
--->
-
-
 <?php
     $id = htmlspecialchars($_POST["id"]);
     $pass1 = htmlspecialchars($_POST["pass1"]);

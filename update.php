@@ -1,9 +1,3 @@
-<!--
-    question_ID受け取る
-    データベース接続
-    表示
-    submitされたら、update_confirm.phpにデータ送りページ遷移
--->
 <?php
     require('require/session.php');
     $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
