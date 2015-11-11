@@ -1,8 +1,9 @@
+<!--回答したら同じページに-->
 <?php
     require('require/session.php');
     $view="";   //    question用変数
     $ans="";    //    回答用変数
-    $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
+    $pdo = new PDO('mysql:dbname=an;host=localhost', 'root', '');
 //    question table用
     $stmt = $pdo->query('SET NAMES utf8');
 //    ans table用
@@ -20,23 +21,22 @@
         $view = "SQLエラー（view）";
     }else{
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        $view .= '<div class="question">user:'.$result['user_id'].' /date:'.$result['date'].'<br>title:'.$result['title'].'<br>text:'.$result['question'].'<br></div>';
+        $view .= '<div class="question_disp" style="background-color:#FFF;margin-bottom:10px;"><span style="border-bottom: 1px solid blue;">'.$result['user_id'].' /'.$result['date'].'<br></span>'.$result['title'].'<br>'.$result['question'].'</div>';
     }
     if($flag_ans==false){
 //        エラーチェック
         $ans = "SQLエラー（ans）";
     }else{
         while($result_ans = $stmt_ans->fetch(PDO::FETCH_ASSOC)){
-            $ans .= '<div class="list">anser:'.$result_ans['ans_user'].' /date:'.$result_ans['date'].'<br>text:'.$result_ans['ans'].'</div><br>';
-            
+            $ans .= '<div class="list" style="margin-bottom:10px;"><span style="border-bottom: 1px solid #aaa;">'.$result_ans['ans_user'].' /'.$result_ans['date'].'</span><br>'.$result_ans['ans'].'</div>';
         }
     }
 ?>
 <?php require('require/header.php'); ?>
 <div class="margin_left50">
     <label class="margin_top20">質問閲覧</label>
-    <?=nl2br($view)?>
     <br>
+    <?=nl2br($view)?>
     <?=nl2br($ans)?>
 </div>
 <form method="post" action="question_ans_execute.php">

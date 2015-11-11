@@ -6,7 +6,7 @@
     $page_num = "";
     $view = "";
     $view = array();
-    $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
+    $pdo = new PDO('mysql:dbname=an;host=localhost', 'root', '');
     $stmt = $pdo->query('SET NAMES utf8');
     $stmt = $pdo->prepare("SELECT * FROM question WHERE user_id='$id' ORDER BY date DESC");
     $flag = $stmt->execute();
@@ -17,7 +17,7 @@
             if($i == 0){
                 $view[$count] = "";
             }
-            $view[$count] .= '<div class="list"><a href="question_history.php?question_id='.$result['id'].'"method="get" action="question_history.php">'.$result['title'].'date:'.$result['date'].'</a><br>'.mb_substr($result['question'],0,100,'UTF-8').'</div><br>';
+            $view[$count] .= '<div class="list"><a href="question_history.php?question_id='.$result['id'].'"method="get" action="question_history.php">'.$result['title'].'/'.$result['date'].'</a><br>'.mb_substr($result['question'],0,100,'UTF-8').'</div><br>';
             $i++;   //件数チェック
             if($i >= $num){  //表示件数以上になったら 入れ終わって端数があるか？
                 $count++;   //ページ数

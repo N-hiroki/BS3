@@ -7,9 +7,9 @@
     $page_num = "";
     $view = "";
     $view = array();
-    $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
+    $pdo = new PDO('mysql:dbname=an;host=localhost', 'root', '');
     $stmt = $pdo->query('SET NAMES utf8');
-    $stmt = $pdo->prepare("SELECT * FROM question WHERE title LIKE '%$key%' OR question LIKE '%$key%' ORDER BY id DESC");
+    $stmt = $pdo->prepare("SELECT * FROM question WHERE (title LIKE '%$key%' OR question LIKE '%$key%') AND view_flag=0 ORDER BY id DESC");
     $flag = $stmt->execute();
     if($flag==false){
         $view = "SQLエラー";

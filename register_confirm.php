@@ -10,7 +10,7 @@
     }
 ?>
 <?php require('require/header.php'); ?>
-<div class="margin_left50">
+<div class="margin_left50" style="margin-bottom:20px;">
     <label class="margin_top20">内容確認</label>
     <br>
     <?=$view?>
@@ -29,4 +29,5 @@
     <input type="hidden" name="pass" value="<?=$pass1?>">
     <input type="submit" class="form-control btn-primary" id="a"value="登録">
 </form>
+<a href="top.php" class="float_light" style="position:relative;top:70px;right:40px;">トップ</a>
 <?php require('require/footer2.php'); ?>

@@ -1,6 +1,6 @@
 <?php
     require('require/session.php');
-    $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
+    $pdo = new PDO('mysql:dbname=an;host=localhost', 'root', '');
 //    question table用
     $stmt = $pdo->query('SET NAMES utf8');
 //    ans table用
@@ -16,7 +16,7 @@
         $view = "SQLエラー（view）";
     }else{
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        $view .= '<div class="question">user:'.$result['user_id'].' date:'.$result['date'].'<br>title:'.$result['title'].'<br>text:'.$result['question'].'</div>';
+        $view .= '<div class="question" style="background-color:#FFF;margin-bottom:10px;">'.$result['user_id'].' /'.$result['date'].'<br>'.$result['title'].'<br>'.$result['question'].'</div>';
     }
 //    回答検索
     $stmt_ans = $pdo->prepare("SELECT * FROM ans WHERE id='$question_id'");
@@ -27,7 +27,7 @@
         $ans = "SQLエラー（ans）";
     }else{
         while($result_ans = $stmt_ans->fetch(PDO::FETCH_ASSOC)){
-            $ans .= '<div class="list">anser:'.$result_ans['ans_user'].' date:'.$result_ans['date'].'<br>'.$result_ans['ans'].'</div><br>';
+            $ans .= '<div class="list" style="margin-top:10px;">'.$result_ans['ans_user'].' /'.$result_ans['date'].'<br>'.$result_ans['ans'].'</div>';
         }
     }
 ?>
@@ -35,7 +35,6 @@
 <div class="margin_left50">
     <label class="margin_top20">質問履歴閲覧</label>
     <?=nl2br($view)?>
-    <br>
     <?=nl2br($ans)?>
 </div>
 <div class="margin_top20">

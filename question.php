@@ -13,7 +13,7 @@
 <div class="margin_left50">
     <label class="margin_top20">質問する</label>
     <form method="post" action="question_confirm.php">
-        <textarea placeholder="タイトル" name="title" class="question"><?=$title?></textarea>
+        <textarea placeholder="タイトル" name="title" class="question height30"><?=$title?></textarea>
         <textarea id="text_q" name="question" placeholder="質問"><?=$question?></textarea>
         <input type="submit" class="form-control btn-primary btn_posi" value="確認">
     </form>

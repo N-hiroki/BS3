@@ -1,6 +1,10 @@
 body{
     max-width: 1280px;
     width: auto;
+    background-color: #EEE;
+}
+main{
+    min-height: 320px;
 }
 #header{
     max-height: 300px;
@@ -8,6 +12,13 @@ body{
     height:auto;
     width:auto;
 }
+.width40_{
+    width:40%;
+}
+.width65_{
+    width:65%;
+}
+
 div#header.container{
     margin: 0px 0px;
 }
@@ -20,12 +31,18 @@ div#header.container{
 .margin_left50{
     margin-left: 50px;
 }
+.margin_left10_{
+    margin-left: 10%;
+}
+.margin_top10{
+    margin-top: 10px;
+}
 .margin_top20{
     margin-top: 20px;
 }
 .bottom20{
     position:relative;
-    bottom: 20px;
+    bottom:20px;
 }
 .btn_posi{
     position:relative;
@@ -33,10 +50,16 @@ div#header.container{
     right:400px;
 }
 .width100{
-        width:100px;
+    width:100px;
 }
 .width500{
-        width:500px;
+    width:500px;
+}
+.height30{
+    height:30px;
+}
+.height400{
+    height:400px;
 }
 #logo{
     max-width: 300px;
@@ -85,10 +108,10 @@ textarea{
     left:100px;
 }
 .btn_posi{
-        width:100px;
-        position: relative;
-        left: 300px;
-    }
+    width:100px;
+    position: relative;
+    left: 300px;
+}
 .border{
     border-left: 1px solid #CEE0F5;
 }
@@ -136,6 +159,13 @@ textarea{
 }
 .question{
     width: 65%;
+}
+.question_disp{
+    width: 65%;
+}
+textarea{
+    width: 60%;
+    height:200px;
 }
 @media(max-width: 900px){
 /*    width900px以下*/

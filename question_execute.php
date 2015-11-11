@@ -3,7 +3,7 @@
     $title = $_POST["title"];
     $question = $_POST["question"];
     $date = date("Y-m-d H:i:s");
-    $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
+    $pdo = new PDO('mysql:dbname=an;host=localhost', 'root', '');
     $stmt = $pdo->query('SET NAMES utf8');
     $stmt = $pdo->prepare("INSERT INTO question(id,title,question,date,user_id)VALUES(null,:title,:question,:date,:id)");
     $stmt->bindValue(':title', $title);

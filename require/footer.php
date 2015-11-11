@@ -1,3 +1,4 @@
+        </main>
         <div id="footer" class="container">
             <a href="logout.php" class="float_light bottom20 margin_left20 border">ログアウト</a>
             <a href="index.php" class="float_light bottom20 border">メイン</a>

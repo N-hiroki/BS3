@@ -1,6 +1,7 @@
 <?php
     session_start();
-    $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
+    $salt = "mwefCMEP28DjwdW3lwdS239vVS";
+    $pdo = new PDO('mysql:dbname=an;host=localhost', 'root', '');
     $id = htmlspecialchars($_POST["id"]);
     $pass = htmlspecialchars($_POST["pass"]);
     if($id == "" || $pass == ""){
@@ -8,6 +9,7 @@
         header("Location: top.php");
         exit;
     }
+    $pass = md5($pass . $salt);
     $stmt = $pdo->query('SET NAMES utf8');
     $stmt = $pdo->prepare("SELECT * FROM user WHERE id = '$id' AND pass = '$pass'");
     $flag = $stmt->execute();

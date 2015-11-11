@@ -55,5 +55,6 @@
         <img src="img/mission1.png" alt="生産性の向上" width="900px;">
         <img src="img/mission2.png" alt="人財不足の解消" width="900px;">
         <img src="img/contribution_to_society.png" alt="社会貢献" width="900px">
+        <p id="page-top"><a href="#wrap">PAGE TOP</a></p>
     </div>
     <?php require('require/footer2.php'); ?>

@@ -21,10 +21,10 @@
     }
 ?>
 <?php require('require/header.php'); ?>
-    <div class="margin_left50">
+    <div class="margin_left50 height400">
         <label class="margin_top20">新規登録</label>
-        <form method="post"  class="question" action="register_confirm.php">
-            <label class="width100">ID</label>
+        <form method="post" class="question" action="register_confirm.php">
+            <label class="width100">ID</label><p style="font-size:8px;">英数字、ひらがな、カタカナ、漢字使用可能  すでに使用されているIDは使用不可</p>
             <input type="text" name="id" class="form-control" placeholder="ID" value="<?=$id?>">
             <?=$NGpass?>
             <label class="width100">Pass</label>
@@ -38,4 +38,5 @@
             <input type="submit" class="form-control btn-primary btn_posi" value="確認">
         </form>
     </div>
+    <a href="top.php" class="float_light" style="position:relative;top:70px;right:40px;">トップ</a>
 <?php require('require/footer2.php'); ?>

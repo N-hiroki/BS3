@@ -1,11 +1,12 @@
+<!--質問が長文だとGETで渡せない（question.php　修正）-->
 <?php
     require('require/session.php');
     $title = htmlspecialchars($_POST["title"]);
     $question = htmlspecialchars($_POST["question"]);
-    $view = '<div class="question">title/'.$title.'<hr>text/'.$question.'</div>';
+    $view = '<div class="question" style="background-color:#FFF;">'.$title.'<br>'.$question.'</div>';
 ?>
 <?php require('require/header.php'); ?>
-<div class="margin_left50">
+<div class="margin_left50" style="margin-bottom:30px;">
     <label class="margin_top20">質問確認</label>
     <br>
     <?=nl2br($view)?>

@@ -1,9 +1,11 @@
 <?php
     session_start();
+    $salt = "***************";
     $id = $_POST["id"];
     $mail = $_POST["mail"];
     $pass = $_POST["pass"];
-    $pdo = new PDO('mysql:dbname=bs;host=localhost', 'root', '');
+    $pass = md5($pass . $salt);
+    $pdo = new PDO('mysql:dbname=an;host=localhost', 'root', '');
     $stmt = $pdo->query('SET NAMES utf8');
     $stmt = $pdo->prepare("INSERT INTO user(id,mail,pass)VALUES(:id,:mail,:pass)");
     $stmt->bindValue(':id', $id);
